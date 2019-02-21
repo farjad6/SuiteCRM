@@ -1,18 +1,20 @@
 ## First part from https://github.com/github/gitignore/blob/master/SugarCRM.gitignore
-# Ignore custom .htaccess stuff.
 /.htaccess
 # Ignore large parts of the annoying cache directory without breaking things.
 cache/*
 upload/*
 !upload/index.html
 # Ignore some files and directories from the custom directory.
-custom/
 custom/history/*
 custom/blowfish/*
 custom/modulebuilder/*
 custom/working/*
 custom/modules/*/Ext/
-custom/modules/unified_search_modules_display.php
+custom/application/Ext/Include/modules.ext.php
+custom/application/Ext/Language/en_us.lang.ext.php
+custom/application/Ext/TableDictionary/tabledictionary.ext.php
+custom/application/Ext/EntryPointRegistry/entry_point_registry.ext.php
+#custom/modules/unified_search_modules_display.php
 # Ignore AOD indexes
 modules/AOD_Index/Index/*
 install/status.json
@@ -31,6 +33,7 @@ custom/modules/Connectors/connectors/sources/ext/*/*/config.php
 .metadata
 bin/**
 tmp/**
+/temp/*
 tmp/**/*
 *.tmp
 *.bak
@@ -76,10 +79,8 @@ lang_cmp.php
 SuiteCRM.kdev4
 
 #Ignore composer vendor folder
-vendor/
+/vendor/*
 public/
-
-.php_cs.cache
 
 
 #Ignore bower_components
@@ -93,21 +94,10 @@ themes/SuiteP/css/*/*.map
 themes/SuiteP/css/*/color-palette.css
 themes/SuiteP/css/*/variables.css
 tests/_output/*
+include/javascript/mozaik/vendor/
 
 
 #Ignore browserstack
 BrowserStackLocal
 browserstack.err
 cache/
-custom/**/
-.sass-cache/
-
-# Ignore testing environment
-build/tmp/
-
-# IMAP testing
-fakeImapResource
-include/Imap/ImapTestSettings.txt
-
-# Ignore php-cs-fixer cache
-.php_cs.cache
